@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>05_float_layout</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        header {
+            background-color: plum;
+            height: 100px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+        article.content1 .slide {
+            width: 90%;
+            height: 500px;
+            background-color: yellowgreen;
+            margin: 0 auto;
+        }
+
+        article.content2 {
+            width: 100%;
+            overflow: auto;
+        }
+        article.content2 > div {
+            width: 33.33%;
+            height: 300px;
+            float: left;
+        }
+
+        article.content2 .box1 {
+            background-color: skyblue;
+        }
+        article.content2 .box2 {
+            background-color: pink;
+        }
+        article.content2 .box3 {
+            background-color: orange;
+        }
+
+        article.content3 .box4 {
+            width: 100%;
+            height: 150px;
+            background-color: red;
+        }
+
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: blue;
+        }
+
+        footer p {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Header</h1>
+    </header>
+
+    <section>
+        <article class="content1">
+            <div class="slide">메인슬라이드</div>
+        </article>
+
+        <article class="content2">
+            <div class="box1">컨텐츠1</div>
+            <div class="box2">컨텐츠2</div>
+            <div class="box3">컨텐츠3</div>
+        </article>
+
+        <article class="content3">
+            <div class="box4">컨텐츠4</div>
+        </article>
+    </section>
+
+    <footer>
+        <p>copyright2024</p>
+    </footer>
+    
+</body>
+</html>

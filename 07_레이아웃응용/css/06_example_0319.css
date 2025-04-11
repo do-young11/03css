@@ -1,0 +1,236 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* *********************************** */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ***************************************** */
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #222;
+    background-image: url(../images/bg.jpg);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+
+    padding: 30px 0 20px;
+    background-image: url(../images/header-triangle.png), url(../images/bg-header.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: 41% 0, left top;
+}
+
+header .top {
+    width: 960px;
+    margin: 0 auto;
+}
+
+header .top .logo {
+    float: left;
+}
+
+header .top .list {
+    float: right;
+}
+
+header .top .list ul li {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+}
+
+header .top .list ul li~li {
+    padding-left: 20px;
+}
+
+header .top .list ul li::after {
+    content: "/";
+    display: block;
+    color: white;
+
+    position: absolute;
+    left: 5px;
+    top: 0;
+}
+
+header .top .list ul li:first-child::after {
+    display: none;
+}
+
+header .top .list ul li a {
+    color: white;
+}
+
+header .top .list ul li a:hover {
+    color: yellow;
+}
+
+
+section {
+    width: 960px;
+    margin: 0 auto;
+    background-image: url(../images/bg-triangle.png);
+    background-repeat: no-repeat;
+}
+
+section .con1 {
+    background-image: url(../images/triangles.png);
+    background-repeat: no-repeat;
+    background-position: 123px 142px; 
+
+    border-bottom: 2px solid white;
+    height: 560px;
+
+    position: relative;
+}
+
+.con1 .gear h2 {
+    color: white;
+    font-size: 2rem;
+
+    position: absolute;
+    right: 184px;
+    top: 156px;
+}
+
+.con1 .gear .gear-con {
+    width: 26%;
+    margin: 20px 0;
+
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+
+.con1 .gear .gear-con p {
+    margin-bottom: 5px;
+    color: white;
+    font-size: 14px;
+}
+.con1 .gear .gear-con p.date {
+    color: bisque;
+    font-size: 16px;
+}
+
+.con1 .gear .gear-con p a {
+    color: white;
+}
+
+section .con2 {
+    width: 960px;
+    margin-bottom: 20px;
+}
+
+.con2 h3 {
+    font-size: 30px;
+    padding: 20px 0;
+}
+
+.con2 h3 {
+    color: white;
+}
+
+.con2 .box {
+    float: left;
+    width: 23.5%;
+}
+
+.con2 .box~.box {
+    margin-left: 2%;
+}
+
+.con2 .box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.con2 .box .sub-box {
+    color: white;
+}
+
+.con2 .box .sub-box p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.con2 .box .sub-box p~p {
+    border-top: 2px solid white;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+footer .foot-link {
+    width: 960px;
+    margin: 0 auto;
+    padding: 20px 0 30px;
+
+    text-align: right;
+}
+
+footer .foot-link a, .foot-link p {
+    display: inline-block;
+
+    margin: 0 10px;
+}
+
+footer .foot-link a {
+    font-size: 14px;
+    color: white;  
+   
+    position: relative;
+}
+
+footer .foot-link a:hover {
+    color: yellow;
+}
+
+footer .foot-link a::before {
+    content: "";
+    display: block;
+
+    width: 2px;
+    height: 14px;
+    background-color: #fff;
+
+    position: absolute;
+    right: -15px;
+    top: 4px;
+}
+
+footer .foot-link p {
+    color: white;
+}

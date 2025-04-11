@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>06_자식요소선택자</title>
+
+    <style>
+        /* 하위요소 선택자 */
+        /* 띄어쓰기는 자식요소의 모든 요소 */
+        .gnb li a {
+            background-color: brown;
+        }
+        .gnb a {
+            color: aquamarine;
+        }
+
+        /* 자식요소 선택자 */
+        /* >는 부모의 자식 요소만 */
+        .gnb > li > a {
+            font-weight: bold; color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    GNB : Global Navigation Bar → 대메뉴
+    LNB : Local Navigation Bar  → 서브메뉴 
+    -->
+
+    <ul class="gnb">
+        <li>
+            menu
+            <ul>
+                <li><a href="#">sub</a></li>
+                <li>sub</li>
+                <li><a href="#">sub</a></li>
+                <li>sub</li>
+                <li>sub</li>
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">menu</a>
+        </li>
+    </ul>
+
+</body>
+</html>

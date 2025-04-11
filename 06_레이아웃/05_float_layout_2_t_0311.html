@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05_float_layout_2_t</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+            background-color: rgb(247, 189, 113);
+        }
+
+        main {
+            width: 90%;
+            height: 500px;
+            background-color: rgb(28, 235, 166);
+            margin: 0 auto;
+        }
+
+        article.content {
+            width: 100%;
+            background-color: burlywood;
+            
+            /* float 해제하는 방법 3 */
+            /* overflow: auto; */
+            
+            /* float 해제하는 방법 4 */
+            /* height: 400px; */
+        }
+        
+        article.content > div {
+            width: 33.33%;
+            height: 400px;
+            /* height: 50%; */
+            /* └ 부모가 높이를 가지고 있을 때 %값 사용 */
+            float: left;
+        }
+        
+        .con1 {
+            background-color: darkcyan;
+        }
+        
+        .con2 {
+            background-color: lightcoral;
+        }
+
+        .con3 {
+            background-color: saddlebrown;
+        }
+        
+        article.banner {
+            width: 100%;
+            height: 300px;
+            background-color: olivedrab;
+            
+            /* float 해제하는 방법 1 */
+            /*  float 적용된 박스 다음에 박스가 없으면 사용할 수 없음 */
+            /* clear: both; */
+        }
+        
+        footer {
+            width: 100%;
+            height: 100px;
+            background-color: navy;
+            color: wheat;
+        }
+
+        /* float 해제하는 방법 5 (가장 많이 사용) */
+        /* 
+        float을 해제하기 위한 클래스와 가상요소 생성 (class명은 clear 또는 clearfix 사용)
+        - 사용위치 : float된 자식을 감싸는 부모요소 (또는 상위요소)
+        */
+        .clearfix::after {
+            content: "";
+            /* 임의의 내용 부여 */
+
+            display: block;
+            /* 가상요소는 inline으로 인식하므로 display를 block 요소로 변경 */
+
+            clear: both;
+        }
+
+        </style>
+</head>
+
+<body>
+    
+    <header>
+        <p>Header</p>
+    </header>
+    
+    <main>
+        <p>메인슬라이드</p>
+    </main>
+    <!-- * main (독립적인 태그)
+    - 문서에서 한번 사용 가장 핵심적인 내용이 들어가는 부분에 사용 
+    (nav나 검색 header에 들어가는 요소들은 포함될 수 없음)
+    - section 안에 사용 불가능
+    -->
+    
+    <section>
+        <article class="content clearfix">
+            <div class="con1">컨텐츠1</div>
+            <div class="con2">컨텐츠2</div>
+            <div class="con3">컨텐츠3</div>
+            <!-- ::after / float 해제 -->
+        </article>
+
+        <article class="banner">
+            <p>banner</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright2025</p>
+    </footer>
+
+</body>
+
+</html>

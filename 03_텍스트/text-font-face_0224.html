@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>text-font-face</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Moirai+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* 구글 웹 폰트 */
+        @import url('https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
+
+        /* 
+        웹폰트 변환하기
+        -직접변화
+        1) 폰트변환 (ttf, otf → eot, woff)
+        2) 변환된 폰트의 사용 설정 (@font-face)
+        3) 대상을 선택해서 적용
+
+        -변환사이트 이용
+        구글 웹 폰트 사용하기 
+        1) <link> 사용 - html에서 사용
+        2) @import 사용 (<style> 내에서 사용) - css 내부에서 사용
+        */
+
+        /* 
+        웹폰트 설정 
+        @ - 파일이나 설정을 끌어오는 의미
+        format - 파일의 확장명
+        */
+
+        @font-face {
+            font-family: '훈하늘보리R';
+            src: url('font/훈하늘보리R.eot') format('embedded-opentype'), url('font/훈하늘보리R.woff') format('woff');
+        }
+
+        /* 웹폰트 설정2 (사이트 이용) */
+        @font-face {
+            font-family: '1HoonSkybori R';
+            src: url('font/HoonSkybR.eot');
+            src: url('fonr/HoonSkybR.eot?#iefix') format('embedded-opentype'),
+                url('font/HoonSkybR.woff2') format('woff2'),
+                url('font/HoonSkybR.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Binggrae Melona';
+            src: url('font/BinggraeMelona.eot');
+            src: url('font/BinggraeMelona.eot?#iefix') format('embedded-opentype'),
+                url('font/BinggraeMelona.woff2') format('woff2'),
+                url('font/BinggraeMelona.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'BinggraeII';
+            src: url('font/BinggraeII.eot');
+            src: url('font/BinggraeII.eot?#iefix') format('embedded-opentype'),
+                url('font/BinggraeII.woff2') format('woff2'),
+                url('font/BinggraeII.woff') format('woff');
+        }
+
+        @font-face {
+            font-family: 'TmonMonsori';
+            src: url('font/TmonMonsoriBlack.eot');
+            src: url('font/TmonMonsoriBlack.eot?#iefix') format('embedded-opentype'),
+                url('font/TmonMonsoriBlack.woff2') format('woff2'),
+                url('font/TmonMonsoriBlack.woff') format('woff');
+            font-weight: 900;
+        }
+
+        /* 
+        eot : IE 하위버전을 위해 사용
+        woff : 크롬, 사파리 등 모던 브라우저를 위해 사용
+        woff2 : woff를 개선한 파일 포맷으로 woff 대비 30~50% 압축율이 높음,
+        브라우저에서 지원이 안되는 경우가 있으므로 woff 포맷과 함께 사용
+        */
+
+        h2 {
+            color: darkred;
+        }
+
+        /* font-family */
+
+        /* '' - 띄어쓰기 있는 폰트를 하나로 묶어주거나, 한글명 폰트일때 사용 */
+        .serif {
+            font-family: Times, 'Times New Roman', serif;
+        }
+
+        .sans-serif {
+            font-family: '돋움', Helvetica, Arial, sans-serif;
+        }
+
+        /* 웹폰트 적용 */
+        .hun {
+            font-family: '훈하늘보리R';
+            font-size: 32px;
+        }
+
+        .hun2 {
+            font-family: '1HoonSkybori R';
+            font-size: 32px;
+            color: lightsalmon
+        }
+
+        .bing {
+            font-family: 'Binggrae Melona';
+            color: yellowgreen;
+            font-size: 20px;
+        }
+
+        .bing2 {
+            font-family: 'BinggraeII';
+            color: darkseagreen;
+            font-size: 24px;
+        }
+
+        .tmon {
+            font-family: 'TmonMonsori';
+            color: salmon;
+            background-color: antiquewhite;
+        }
+
+        .dohyeon {
+            font-family: "Do Hyeon", serif;
+            color: skyblue;
+            font-size: 30px;
+        }
+
+        .picture {
+            font-family: "Black And White Picture", serif;
+            font-size: 30px;
+        }
+
+        .moi {
+            font-family: "Moirai One", serif;
+            font-size: 35px;
+            color: #e53888;
+            font-weight: 800;
+        }
+
+        .grand {
+            font-family: "Grandiflora One", serif;
+            font-size: 30px;
+            color: #626f47;
+            font-weight: 800;
+            background-color: #27445d;
+        }
+        
+        /* Noto Sans KR 두께별 디자인 */
+        .noto {
+            font-family: "Noto Sans KR", serif;
+        }
+        .n100 {font-weight: 100;}
+        .n200 {font-weight: 200;}
+        .n300 {font-weight: 300;}
+        .n400 {font-weight: 400;}
+        .n500 {font-weight: 500;}
+        .n600 {font-weight: 600;}
+        .n700 {font-weight: 700;}
+        .n800 {font-weight: 800;}
+        .n900 {font-weight: 900;}
+    </style>
+</head>
+
+<body>
+
+    <h2>font-family</h2>
+    <p class="serif">serif</p>
+    <p class="sans-serif">sans-serif</p>
+
+    <h2>font-face</h2>
+    <p>기본폰트</p>
+    <p class="hun">훈하늘보리R</p>
+    <p class="hun2">훈하늘보리R</p>
+    <p class="bing">빙그레 Binggrae Melona 메로나</p>
+    <p class="bing2">빙그레2 BinggraeII</p>
+    <p class="tmon">티몬 TmonMonsori</p>
+
+    <h2>구글 웹 폰트</h2>
+    <p class="dohyeon">배달의 민족 도현체</p>
+
+    <p class="picture">black and white 픽쳐</p>
+
+    <p class="moi">Moirai One 뚫린 폰트</p>
+
+    <p class="grand">Grandiflora One 구글 웹 폰트</p>
+
+    <h2>Noto Sans</h2>
+    <p class="noto n100">noto-sans KR 노토 산스 100</p>
+    <p class="noto n200">noto-sans KR 노토 산스 200</p>
+    <p class="noto n300">noto-sans KR 노토 산스 300</p>
+    <p class="noto n400">noto-sans KR 노토 산스 400</p>
+    <p class="noto n500">noto-sans KR 노토 산스 500</p>
+    <p class="noto n600">noto-sans KR 노토 산스 600</p>
+    <p class="noto n700">noto-sans KR 노토 산스 700</p>
+    <p class="noto n800">noto-sans KR 노토 산스 800</p>
+    <p class="noto n900">noto-sans KR 노토 산스 900</p>
+
+
+</body>
+
+</html>

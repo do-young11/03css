@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>04_background-size</title>
+
+    <style>
+        div.bg {
+            border: 1px solid brown;
+            width: 100%;
+            height: 600px;
+            background-image: url(images/bg-size.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: auto 100%;
+        }
+
+        /* 
+        background-size : width height;
+
+        background-size 속성값
+        - auto : 기본값, 자동 맞춤 (원래 이미지 크기 그대로 사용)
+        - contain : 배경이미가 적용되는 공간의 짧은 축에 기준으로 이미지 조절 (이미지가 잘리지 않고 보여짐)
+        - cover : 배경이미가 적용되는 공간의 긴 축에 기준으로 이미지 조절 (긴 축으로 채워주므로 이미지가 잘리는 경우가 발생)
+        
+        직접 px, % 수치입력 가능
+        % : 배경 이미지가 들어가는 박스 기준으로 크기 설정
+        px : 이미지 크기 직접 조절
+        */
+
+        /* 이미지 태그 크기 조절 */
+        /* 
+        -이미지 태그, 배경이미지는 크기 조절을 하지 않을 경우 '이미지 원래의 사이즈가 사용'되므로 크기 조절 필수
+        
+        -이미지 크기를 조절 할 때 width, height 중 하나의 값을 설정하고 비율에 따라 자동으로 값이 설정되도록 한다
+        (ex, width값만 설정할 경우-> 비율에 따라 자동으로 값이 설정 되도록 한다)
+        */
+
+        /* 
+        이미지 태그 사용 시 
+        -화면 너비에 따라 유동적으로 이미지 크기 조절이 필요한 경우가 많으므로 img 태그는 주로 '이미지를 담는 상자(ex. div 태그)'에 넣어서 사용하는것이 필요함 
+        */
+        img {
+            /* width: 50%; */
+        }
+
+        .img-box {
+            width: 600px;
+            outline: 3px solid salmon;
+        }
+
+        .img-box img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg"></div>
+
+    <h2>커피빈 브라운 츄러스 라페</h2>
+    <img src="images/coffee.jpg" alt="브라운 츄러스 라떼">
+
+    <div class="img-box">
+        <img src="images/coffee.jpg" alt="브라운 츄러스 라떼">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>01_전체선택자_0220</title>
+
+    <style>
+        /*  css
+        *인라인 스타일
+        <p style="color: red;">내용1</p> → 태그가 여러가지일 때 여러번 써야함, 항상 css 파일보다 먼저 적용, 웹표준에 맞지 않음
+        <p style="color: red;">내용2</p>
+        <p style="color: red;">내용3</p>
+
+        *내부 스타일 시트
+        html 문서안에 head 안에 넣는 것
+
+        *외부 스타일 시트
+        text.css
+        */
+
+        /* 
+        css 기본형
+
+        선택자 {
+            속성명1 : 값; 
+            속성명2 : 값; → 실행코드
+            속성명n : 값;
+        }
+        */
+
+        /* 
+        margin : 바깥여백
+        padding : 안쪽여백
+        */
+        
+        * {
+            margin: 0; 
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 전체요소선택자 : body안의 모든 요소를 선택 -->
+     <!-- head의 title 아래에 style 기입 -->
+
+    <h1>heading-1</h1>
+    <h2>heading-2</h2>
+    <p>paragraph</p>
+    
+    <ul>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+    
+</body>
+</html>

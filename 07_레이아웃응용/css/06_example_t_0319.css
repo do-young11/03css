@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+/*
+reset.css - 속성 리셋
+base.css - 기본값
+common.css - 공통으로 사용할 디자인
+font.css - 폰트가 많을 때
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+/* ****float 해제************************************** */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* *****(영역'내부'에서)컨텐츠 너비를 잡아주는 공통 클래스********** */
+.inner {
+    width: 960px;
+    margin: 0 auto;
+}
+.title {
+    font-size: 30px;
+}
+
+/* *************************************************** */
+
+body {
+    background-image: url(../images/bg.jpg);
+    color: #fff;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/bg-header.jpg);
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+header .logo {
+    background-image: url(../images/header-triangle.png);
+    background-repeat: no-repeat;
+    background-position: right top;
+
+    float: left;
+    margin-left: 31px;
+
+    height: 100px;/* %값 : 명확한 기준(부모 - px로 가지고 있어야 함)이 있어야 사용 가능 */
+    padding-right: 120px;
+    /* 배경이미지를 원하는 곳에 넣을 때 padding값 많이 사용 */
+} 
+header .logo a {
+    display: block;
+    margin-top: 50px;
+} 
+header .logo a img {
+    display: block;
+} 
+
+header .gnb {
+    float: right;
+}
+
+header .gnb ul li {
+    display: inline-block;
+    margin-left: 14px;
+    line-height: 100px;
+
+    position: relative;
+}
+
+header .gnb ul li::before {
+    content: "/";
+    position: absolute;
+    left: -12px;
+}
+
+header .gnb ul li:first-child::before {
+    display: none;
+}
+
+header .gnb ul li a {
+    color: #fff;
+}
+
+header .gnb ul li a:hover {
+    color: greenyellow;
+}
+
+section {
+    width: 960px;
+    margin: 0 auto;
+
+    background-image: url(../images/bg-triangle.png);
+    background-repeat: no-repeat;
+    
+    background: url(../images/bg-triangle.png) no-repeat;
+}
+
+section .about {
+    background: url(../images/triangles.png) no-repeat 125px 141px;
+
+    height: 550px;
+    border-bottom: 2px solid silver;
+
+    position: relative; /* .title .txt-box 의 기준 */
+
+    margin-bottom: 15px;
+}
+
+section .about .title {
+    position: absolute;
+    right: 188px;
+    top: 157px;
+}
+section .about .txt-box {
+    width: 250px;
+    font-size: 15px;
+    letter-spacing: -0.8px;
+
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+}
+section .about .txt-box p {
+    margin-bottom: 10px;
+}
+
+section .about .txt-box p:first-child {
+    color: greenyellow;
+    font-size: 16px;
+    font-weight: 600;
+}
+section .about .txt-box p:last-child {
+    margin-bottom: 0;
+}
+
+section .about .txt-box a {
+    color: #fff;
+}
+
+section .about .txt-box a:hover {
+    color: #333;
+    background-color: white;
+}
+
+section .content {
+    margin-bottom: 40px;
+}
+
+.content .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.content .box-wrap {
+
+}
+.content .box-wrap .box {
+    width: 23.5%;
+    float: left;
+}
+
+.content .box-wrap .box~.box {
+    margin-left: 2%;
+}
+.box img {
+    width: 100%;
+    display: block;
+}
+.box p, .box ul li {
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+.box p:last-child, .box ul li:last-child {
+    border-bottom: 0;
+}
+
+footer {
+    width: 100%;
+    background-image: url(../images/bg-header.jpg);
+    font-size: 14px;
+    padding: 20px 0 30px;
+    color: silver;
+}
+
+footer a {
+    color: silver;
+}
+
+footer ul {
+    float: right;
+}
+
+footer ul li {
+    float: left;
+    margin-right: 12px;
+    position: relative;
+}
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+footer ul li::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: silver;
+
+    position: absolute;
+    left: -6px;
+    top: 3px;
+}
+footer ul li:first-child::before {
+    display: none;
+}
+
+footer ul li a:hover {
+    color: yellowgreen;
+}

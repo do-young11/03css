@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>03_position-fixed</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: aliceblue;
+            position: fixed;
+            left: 0;
+            top: 0;
+            /* 
+            position: fixed; 없는 것처럼 취급 되어 다음 영역이 겹쳐보임
+            (고정 되어 있을 좌표를 줘야 다음 영역과 겹치지 않음)
+            */
+
+        }
+        
+        section {
+            width: 100%;
+            height: 1500px;
+            font-size: 26px;
+            background-color: lightcoral;
+            text-align: center;
+            /* padding-top: 100px; */
+            margin-top: 100px;
+        }
+
+        footer {
+            width: 100%;
+            height: 80px;
+            background-color: navy;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <header>header</header>
+    <section>section</section>
+    <footer>footer</footer>
+</body>
+</html>

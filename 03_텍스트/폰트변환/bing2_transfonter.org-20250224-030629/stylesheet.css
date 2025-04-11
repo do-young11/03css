@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'BinggraeII';
+    src: url('BinggraeII.eot');
+    src: url('BinggraeII.eot?#iefix') format('embedded-opentype'),
+        url('BinggraeII.woff2') format('woff2'),
+        url('BinggraeII.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

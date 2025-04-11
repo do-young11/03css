@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* **float해제************************* */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ****공통************************************* */
+.inbox {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* ****font**************************** */
+/* {
+font-family: "Gaegu", sans-serif;
+font-weight:300, 400, 700;
+}
+{
+font-family: "Winky Sans", sans-serif;
+font-weight:300-900;} */
+
+/* ******************************************** */
+body {
+    font-family: "Winky Sans", sans-serif;
+    color: #222;
+}
+
+header {
+    padding-top: 40px;
+}
+
+header h1 a {
+    font-size: 30px;
+    color: darkcyan;
+}
+header h1 a:hover {
+    font-size: 34px;
+}
+
+header .gnb ul li {
+    display: inline-block;
+    margin: 30px;
+}
+header .gnb ul li a {
+    color: #777;
+}
+
+header .gnb ul li a:hover {
+    color: darkgreen;
+}
+
+section {
+    width: 1280px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: aliceblue;
+
+    font-size: 18px;
+}
+
+section .slide {
+    height: 500px;
+    background-color: rgb(234, 116, 116);
+    padding-top: 10px;
+}
+
+section .product .pd-box {
+    float: left;
+    width: 25%;
+    height: 200px;
+}
+
+.pd1,.pd3 {background-color: skyblue;}
+.pd2,.pd4 {background-color: pink;}
+
+section .banner .bn-box {
+    height: 100px;
+    width: 50%;
+    float: left;
+}
+
+.bn1 {background-color: rgba(173, 41, 63, 0.7);} 
+.bn2 {background-color: rgb(247, 139, 93);}
+
+footer {
+    width: 100%;
+    border-top: 1px solid gray;
+    box-shadow: 0 2px 3px gray;
+    background-color: #eee;
+
+    font-size: 14px;
+}
+
+footer .foot-link {
+    width: 100%;
+    border-bottom: 1px solid #555;
+    padding: 10px 0;
+}
+footer .foot-link ul li {
+    float: left;
+
+    margin-right: 14px;
+}
+
+footer .foot-link ul li a {
+    color: #222;
+}
+
+footer .foot-link ul li a:hover {
+    color: #777;
+}
+
+footer .foot-link p {
+    float: right;
+}
+
+footer .foot-link p a {
+    color: #222;
+}
+
+footer .foot-link p a:hover {
+    color: #777;
+}
+
+footer .copy {
+    color: #555;
+    padding: 20px 0;
+    text-align: left;
+}

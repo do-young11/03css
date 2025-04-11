@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: "Gaegu", sans-serif;
+    color: #222;
+}
+
+/* {
+    font-family: "Gaegu", sans-serif;
+    font-weight: 300, 400, 700;
+    font-style: normal;
+  } */
+
+/* ******************************************** */
+
+
+header .title {
+    width: 1280px;
+    padding-top: 30px;
+
+    margin: 0 auto 10px;
+
+    position: relative;
+}
+
+.title h1 {
+    padding: 0 0 20px 30px;
+    font-size: 30px;
+}
+.title h1 a {
+    color: brown;
+    font-weight: 400;
+}
+
+.title h1 a:hover {
+    font-size: 36px;
+    color: salmon;
+    font-weight: 700;
+}
+
+.title .top {
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.title .top .top-menu li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.title .top .top-menu li a {
+    font-size: 18px;
+    color: #222;
+}
+
+.title .top .top-menu li a:hover {
+    color: brown;
+    font-weight: 700;
+}
+
+section .box {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section .con1 {
+    height: 400px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+    background-color: darkorange;
+}
+section .con1 .slide {
+    font-size: 30px;
+}
+
+section .con2 {
+    background-color: #eee;
+    padding: 10px 0 20px;
+    margin-bottom: 20px;
+}
+section .con2 h2 {
+    font-size: 24px;
+}
+
+section .con2 .sub-box .sb {
+    float: left;
+
+    margin: 20px 2% 0;
+    height: 200px;
+}
+
+section .con2 .sub-box p.s1 {
+    width: 22%;
+    background-color: bisque;
+}
+section .con2 .sub-box p.s2 {
+    width: 44%;
+    background-color: pink;
+}
+section .con2 .sub-box p.s3 {
+    width: 22%;
+    background-color: mediumaquamarine;
+}
+
+section .con2 .sub-box p {
+    padding-top: 10px;
+}
+
+section .con3 {
+    margin-bottom: 30px;
+}
+section .con3 .banner {
+    height: 200px;
+    background-color: skyblue;
+    padding-top: 10px;
+}
+
+footer {
+    height: 80px;
+    background-color: #eee;
+    padding: 20px;
+
+    position: relative;
+}
+
+footer .foot-box {
+    width: 1280px;
+    line-height: 80px;
+    margin: 0 auto;
+}
+footer .foot-box p {
+    float: left;
+}
+footer .foot-box p a {    
+    color: brown;
+    font-size: 18px;
+}
+
+footer .foot-box p a:hover {
+    color: salmon;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+footer .foot-box .foot {
+    float: right;
+}
+
+footer .foot-box .foot .foot-menu li {
+    display: inline-block;
+
+    padding: 0 20px;
+}
+footer .foot-box .foot .foot-menu li a {
+    color: #333;
+    font-weight: 400;
+}
+
+footer .foot-box .foot .foot-menu li a:hover {
+    color: brown;
+    font-weight: 700;
+    font-size: 20px;
+}

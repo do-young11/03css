@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03_example_t</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            /* background-color: darkcyan; */
+            padding: 20px 0;
+            /* line-height: 80px; */
+            text-align: center;
+            /* border-bottom: 1px solid #ccc; */
+            box-shadow: 0 2px 10px #d9d9d9;
+            /* 영역의 구분 방법 중 하나 */
+        }
+        header .tilte {
+            font-size: 2.5rem;
+        }
+
+        section {
+            /* background-color: darkgoldenrod; */
+            /* margin-top: 100px; */
+            padding-top: 80px;
+            text-align: center;
+        }
+
+        section .top {
+            /* text-align: center; */
+            margin-bottom: 40px;
+            /* outline: 2px solid green; */
+        }
+
+        section .top h2 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        section .top p {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        section .content {
+            /* text-align: center; */
+        }
+
+        /* 
+        부모를 포함함 상위 요소에 'text-align' 스타일 적용되는 경우, 
+        하위요소 중 인라인 성격을 가진 요소를 글자처럼 취급, 'text-align'을 통해 정렬
+        */
+        section .content .box {
+            border: 1px solid saddlebrown;
+            width: 240px;
+            height: 240px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 0 10px 20px;
+            text-align: left;
+        }
+
+        section .content .box h3 {
+            font-size: 22px;
+            margin-bottom: 40px;
+        }
+
+        section .content .box a.btn {
+            border: 2px solid salmon;
+            text-decoration: none;
+            padding: 6px 12px;
+            color: salmon;
+            border-radius: 20px;
+        }
+
+        section .content .box a.btn:hover {
+            background-color: salmon;
+            color: white;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">킴스키친</h1>
+    </header>
+
+    <section>
+
+        <div class="top">
+            <h2>인기요리법</h2>
+            <p>킴스키친의 인기요리법을 확인해 보세요!</p>
+        </div>
+
+        <div class="content">
+
+            <div class="box">
+                <h3>한우불고기</h3>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+
+            <div class="box">
+                <h3>궁중떡볶이</h3>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+
+            <div class="box">
+                <h3>산적 꼬치구이</h3>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+
+            <div class="box">
+                <h3>돼지 등갈비 구이</h3>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+
+            <div class="box">
+                <h3>더덕생체</h3>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>

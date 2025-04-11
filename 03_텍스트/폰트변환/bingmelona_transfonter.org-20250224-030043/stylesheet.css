@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Binggrae Melona';
+    src: url('BinggraeMelona.eot');
+    src: url('BinggraeMelona.eot?#iefix') format('embedded-opentype'),
+        url('BinggraeMelona.woff2') format('woff2'),
+        url('BinggraeMelona.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

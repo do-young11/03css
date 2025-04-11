@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+/**********************************************************  */
+.container {
+    background-color: rgb(138, 7, 138);
+    padding: 80px;
+}
+
+.coffee {
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.coffee h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.coffee .wrap {
+    margin-bottom: 30px;
+}
+
+.coffee .wrap .box {
+    float: left;
+    width: 16.6%;
+}
+
+.coffee .wrap .box a img {
+    width: 100%;
+    display: block;
+}
+
+.coffee .insta p a {
+    padding: 10px 20px;
+    background-color: darkorange;
+    color: white;
+}
+
+.coffee .insta p a:hover {
+    background-color: white;
+    color: darkorange;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>07_위치선택자</title>
+
+    <style>
+        /* 
+        위치선택자 
+        같은 형제의 하나 요소를 선택
+        :first-child - 앞에 부모요소가 붙여야하고 작성할때 띄어쓰기하면 안됨
+        */
+        li:first-child {
+            color: blue;
+        }
+
+        li:last-child {
+            color: red;
+            font-size: 30px;
+        }
+
+        li:nth-child(3) {
+            background-color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+
+    <ol>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ol>
+    
+</body>
+</html>

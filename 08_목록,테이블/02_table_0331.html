@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_table</title>
+
+    <style>
+        .table1 {
+            border: 1px solid saddlebrown;
+            margin-top: 50px;
+            width: 600px;
+
+            border-spacing: 10px 30px;
+            /* table 태그 속성중 cellspacing 과 같은것 */
+
+            empty-cells: hide;
+            /* 공간에 내용이 없을 때 안보이게 처리 */
+        }
+
+        .table1 th, .table1 td {
+            border: 1px solid saddlebrown;
+            padding: 20px 10px;
+        }
+
+        .table1 .top {
+            background-color: rgba(0, 175, 175, 0.4);
+        }
+
+        .table2 {
+            margin-top: 50px;
+            border: 1px solid darkblue;
+            width: 600px;
+
+            border-collapse: collapse;
+            border-top: 3px solid rgb(101, 43, 9);
+        }
+
+        .table2 th, .table2 td {
+            border: 1px solid darkblue;
+            padding: 20px;
+        }
+
+        .table2 .top {
+            background-color: rgba(200, 100, 150, 0.7);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- attributes 태그의 속성 -->
+
+    <!-- 기본 테이블 -->
+    <table border="1" width="600" cellpadding="20" cellspacing="10">
+        <tr bgcolor="salmon">
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+    </table>
+
+    <!-- table1 -->
+
+    <table class="table1">
+        <tr class="top">
+            <th>head</th>
+            <th></th>
+            <th>head</th>
+            <th>head</th>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td></td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+    </table>
+
+    <!-- table2 -->
+
+    <table class="table2">
+        <tr class="top">
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+            <th>head</th>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+        <tr>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+            <td>content</td>
+        </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>10_example</title>
+
+    <style>
+        /* 태그, 위치 선택자 
+        h1 {
+            color: blue;
+        }
+        li:nth-child(1) {
+            color: red;
+        }
+        li:nth-child(2) {
+            color: red;
+        } */
+
+        /* 다수를 먼저 선택하여 스타일 넣고, 소수의 요소를 선택해서 바꿔주기 
+        li {
+        color: red;
+        }
+        li:last-child {
+        color: black
+        }
+        */
+
+        /* 아이디 선택자, 속성선택자 
+        #heading {
+            color: blue;
+        }
+        li[class^="list"] {
+            color: red;
+        } */
+
+        /* 클래스 선택자
+        .title {
+            color: blue;
+        }
+        .list {
+            color: red;
+        }
+        */
+        
+        .title {
+            color: blue;
+        }
+        ul li{
+            background-color: antiquewhite;
+            list-style: none;
+        }
+        li[class^=list] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/sydney.png" alt="시드니 항">
+
+    <h1 id="heading" class="title">세계 3대 미항</h1>
+
+    <ul>
+        <li class="list">시드니(sydney),호주</li>
+        <li class="list">리우데자네이루(Rio de janeiro), 브라질</li>
+        <li>나폴리(Naples), 이탈리아</li>
+    </ul>
+    
+</body>
+</html>

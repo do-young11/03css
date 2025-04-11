@@ -1,0 +1,149 @@
+@charset "UTF-8";
+
+/* *******RESET***************************************************************************** */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 400;
+}
+
+/* html*********************************************************************************** */
+.container {
+    padding: 100px 0;
+}
+.content {
+    width: 1280px;
+    margin: 0 auto;
+    /* outline: 2px solid red; */
+}
+
+.content .list {
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+.list h2 {
+    background-image: url(../img/example3/bul_tit.png);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: 0 5px;
+    /* outline: 2px solid salmon; */
+
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 60px;
+    padding: 10px 0 0 30px;
+}
+
+.list .tap {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    padding-top: 20px;
+}
+
+.list .tap ul li {
+    float: left;
+    text-align: center;
+}
+
+.list .tap ul li a {
+    color: #444;
+    padding: 0 20px;
+    font-weight: 500;
+    border-left: 1px solid #444;
+}
+
+.list .tap ul li a.selec {
+    color: green;
+    border: none;
+}
+
+.list .tap ul li a:hover {
+    color: green;
+}
+
+.content .banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner .wrap {
+    width: 100%;
+    /* outline: 2px solid red; */
+}
+
+.banner .wrap .box {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.banner .wrap .box a img {
+    width: 100%;
+}
+
+.banner .wrap .box h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.banner .wrap .box p {
+    font-size: 16px;
+    color: #999;
+    padding: 0 10px;
+}
+
+.banner .button a {
+    position: absolute;
+    bottom: 50%;
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+    margin: -25px;
+}
+
+.banner .button a.prev {
+    left: -150px;
+}
+.banner .button a.next {
+    right: -150px;
+    background-position: -50px 0;
+}
+
+.banner .button a.prev:hover {
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+    background-position: 0 -50px;
+}
+.banner .button a.next:hover {
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+    background-position: -50px -50px;
+}

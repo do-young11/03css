@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta chaeset="UTF-8">
+    <title>05_하위요소선택자</title>
+
+    <style>
+
+        ul{
+            background-color: aqua;
+        }
+
+        /* 하위요소 선택자 */
+         /* .container ul { 
+            border: 3px solid green;
+        }  */
+
+        /* 자식요소 선택자 */
+
+    </style>
+</head>
+<body>
+    <!-- 
+    id는 한가지 요소에 기능을 넣을 때 사용
+    class는 대부분 여러가지의 디자인을 넣을때 사용 -->
+
+    <!-- container : 낱개의 요소를 하나로 묶어줄 때 -->
+ 
+    <div class="container">
+        <h1>주문 방법 및 요금</h1>
+        <p>산지 직송 싱싱한 제주도 감귤을 주문하세요</p>
+
+        <ul>
+            <li>
+                주문방법
+                <ul>
+                    <li>직접 통화</li>
+                    <li>문자 주문</li>
+                </ul>
+            </li>
+            <li>
+                요금
+                <ul>
+                    <li>kg : 10,000원</li>
+                    <li>kg : 20,000원</li>
+                    <li>kg : 30,000원</li>
+                    <li>kg : 40,000원</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <ul>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+    
+</body>
+</html>

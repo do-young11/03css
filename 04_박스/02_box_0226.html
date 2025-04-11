@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>02_box</title>
+
+    <style>
+        h2 {
+            color: skyblue;
+        }
+
+        /* overflow */
+        .div1 {
+            width: 300px;
+            background-color: aquamarine;
+            margin-bottom: 20px;
+            height: 100px;
+        }
+
+        .hidden {
+            overflow: hidden;
+        }
+
+        /* 공간에 넘치는 내용은 숨겨줌 */
+
+        .scroll {
+            overflow-y: scroll;
+            /* overflow: scroll; */
+        }
+
+        /* 
+        공간에 크기 만큼 scroll을 만들어줌
+        x, y 축에 원한 곳에 scroll을 만들 수 있음.
+         */
+
+        .auto {
+            overflow: auto;
+        }
+
+        /* 공간에 내용이 넘치는 곳에 자동으로 스크롤 만들어짐 */
+    </style>
+</head>
+
+<body>
+
+    <h2>overflow</h2>
+    <div class="div1 hidden">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+        College in Virginia, looked up one of the more obscure Latin words, consectetur,
+    </div>
+
+    <div class="div1 scroll">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+        College in Virginia, looked up one of the more obscure Latin words, consectetur,
+    </div>
+
+    <div class="div1 auto">
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin
+        literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+        College in Virginia, looked up one of the more obscure Latin words, consectetur,
+    </div>
+
+    <h2>border - (width/style/color)</h2>
+    <p>border-width: top rigth bottom left</p>
+    <p>border-style: top rigth bottom left</p>
+    <p>border-color: top rigth bottom left</p>
+
+    <p class="border">border: width style color; (통합속성)</p>
+
+    <h2>border-style</h2>
+    <p class="border2 ridge">ridge</p>
+    <p class="border2 groove">groove</p>
+    <p class="border2 inset">inset</p>
+    <p class="border2 outset">outset</p>
+
+    <p class="border3">border-(top/right/bottom/left)</p>
+
+
+    <style>
+        .border {
+            border: 1px solid
+                /* red */
+            ;
+            color: blueviolet;
+
+            border-width: 10px 20px 30px 40px;
+            border-style: dashed dotted double solid;
+            border-color: antiquewhite red blue blueviolet;
+
+        }
+
+        /* border는 width와 style은 꼭 넣어야 함
+        color는 값을 넣지 않으면 글씨와 동일한 색상을 따라감  */
+        /* 
+        dashed : 짧은 점선으로 이루어진 점선
+        dotted : 점으로 이루어진 점선
+        double : 두개의 선으로 이루어짐.
+        solid : 실선
+        */
+
+        .border2 {
+            border: 6px rgb(241, 162, 106);
+        }
+
+        .ridge {
+            border-style: ridge;
+        }
+
+        .groove {
+            border-style: groove;
+        }
+
+        .inset {
+            border-style: inset;
+        }
+
+        .outset {
+            border-style: outset;
+        }
+
+        .border3 {
+            /* border-bottom: 3px solid #ccc;
+            border-left: 5px double darkred; */
+
+            border: 2px solid navy;
+
+            /* border-top-width: 5px;
+            border-top-color: yellowgreen; -위치에 따라서*/
+
+            /* border-width: 5px 2px 2px 2px; */
+            /* border-color: aqua #ccc #ccc #ccc; */
+
+            border-top: 5px solid salmon;
+        }
+    </style>
+
+    <h2>padding</h2>
+    <p class="bg padding1">padding: 50px; (네 방향 모두)</p>
+    <p class="bg padding2">padding: 20px 40px; (위/아래 좌/우)</p>
+    <p class="bg padding3">padding: 20px 40px 10px (위 좌/우 아래)</p>
+    <p class="bg padding4">padding: 20px 10px 30px 5px (위 오른쪽 아래 왼쪽 - 순으로)</p>
+
+    <style>
+        .bg {
+            background-color: beige;
+        }
+
+        .padding1 {
+            padding: 50px;
+        }
+
+        .padding2 {
+            padding: 20px 40px;
+        }
+
+        .padding3 {
+            padding: 20px 40px 10px;
+        }
+
+        .padding4 {
+            padding: 20px 10px 30px 5px;
+        }
+
+        /* auto 값 사용 불가 */
+    </style>
+
+    <h2>margin</h2>
+    <h3 class="center">center</h3>
+
+    <p class="margin1">아날로그(Analog) 신디사이저는 종종 디지털(Digital) 신디사이저보다 '따듯한' 소리가 난다고 한다.</p>
+    <p class="margin2">아날로그(Analog) 신디사이저는 종종 디지털(Digital) 신디사이저보다 '따듯한' 소리가 난다고 한다.</p>
+    <p class="margin3">아날로그(Analog) 신디사이저는 종종 디지털(Digital) 신디사이저보다 '따듯한' 소리가 난다고 한다.</p>
+
+    <style>
+        .center {
+            border-bottom: 2px solid palevioletred;
+            text-align: center;
+            width: 70%;
+            margin: 30px auto 60px;
+        }
+
+        .margin1 {
+            width: 200px;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+
+        .margin2 {
+            width: 200px;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 50px;
+        }
+
+        .margin3 {
+            width: 200px;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        /* 
+         margin: 0 auto; 를 사용하여 덩어리를 좌우 중앙에 배치하려면
+         1) 블러요소
+         2) width 값이 100%보다 작아야 한다
+        */
+
+        /* 
+        요소의 크기 (총 너비) = 내용(content)부터 border 사이즈까지
+        margin - 위치에 영향을 줌, 크기에 영향을 주지 않음         
+          auto - 좌/우 값에 넣으면 남은 너비에 중앙에 배치 (화면 비율이 변해도 중앙 배치), 위/아래 값에는 적용 불가
+        */
+    </style>
+
+    <h2>box-sizing</h2>
+    <div class="box">봄이 오고 있어요!</div>
+    <div class="box padding">봄이 오고 있어요!</div>
+    <div class="box padding sizing">봄이 오고 있어요!</div>
+
+    <div class="box0">주말이 다가오고 있어요!! 오예!!</div>
+
+    <style>
+        .box {
+            width: 300px;
+            height: 200px;
+            border: 5px solid #01517c;
+            background-color: rgb(253, 82, 82);
+            margin-bottom: 20px;
+            color: aliceblue;
+        }
+
+        .padding {
+            padding: 20px 30px;
+        }
+
+        .sizing {
+            box-sizing: border-box;
+        }
+
+        /* box-sizing = content + padding + border (width 값을 넣을 경우에 사용)*/
+        /* 
+            content-box = 정해진 width의 값을 content만 포함
+            border-box = 정해진 width 값에 padding, border 까지 포함
+            */
+
+        .box0 {
+            background-color: yellowgreen;
+            border: 10px solid sandybrown;
+            padding: 50px 100px;
+            color: aliceblue;
+            /* width: 100%; */
+        }
+
+        /* width: 100%; 너비를 content로 적용 (화면이 줄어들면 content 짤리고 스크롤 생김.) */
+    </style>
+
+    <h2>display: block, inlline, inline-block</h2>
+    <h3 class="block">나는 블러요소~~</h3>
+    <a href="#">나는 인라인 요소</a>
+
+    <!-- 인라인-블록 : 요소를 가로로 배치, 내용은 블록 요소의 속성 적용 -->
+    <ul class="inline-block">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+
+    <!-- 인라인 요소
+        1) width, height가 적용되지 않고 인라인 요소가 기본으로 갖는 크기가 우선 적용!!
+        2) 크기가 정확하지 않으므로 margin 값이 제대로 적용되지 않음 
+     -->
+    <ul class="inline">
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+        <li>menu</li>
+    </ul>
+
+    <!-- 인라인요소 -->
+    <h3>inline 요소</h3>
+    <ul>
+        <li>img</li>
+        <li>a, span</li>
+        <li>b, strong, i, em, sup, sub, q</li>
+        <li>폼태그 - input, textarea, button, label, select</li>
+    </ul>
+
+    <!-- 블러요소 -->
+    <h3>block</h3>
+    <ul>
+        <li>div (division)</li>
+        <li>heading (h1~h6)</li>
+        <li>p</li>
+        <li>ul, ol, li, (list-item)</li>
+        <li>header, nav, section, article, aside, footer, main</li>
+        <li>hr</li>
+        <li>폼태그 - form, fieldset</li>
+    </ul>
+
+    <!-- 인라인 요소인 이미지 태그의 크기조절 -->
+    <!-- 
+        인라인 요소는 width, height값을 지정해도 적용되지 않지만, 인라인 요소 중 '태그의 속성'으로 크기 지시가 가능한 요소(ex. img 태그)는 width, height값을 적용할 수 있다.
+     -->
+    <img src="https://cdn.pixabay.com/photo/2022/12/14/21/47/raccoon-7656362_640.png" alt="앉아있는 너구리" width="300">
+    <img src="https://cdn.pixabay.com/photo/2022/12/14/21/47/raccoon-7656362_640.png" alt="앉아있는 너구리" class="guri">
+
+
+    <h2>display:none;</h2>
+    <ul class="display">
+        <li>홈(Home)</li>
+        <li>상품(Product)</li>
+        <li class="none">서비스(service)</li>
+        <li>소개(About)</li>
+        <li>연락처(contect)</li>
+    </ul>
+
+    <style>
+        .block {
+            background-color: #01517c;
+            display: inline;
+        }
+
+        /* 
+        *display: inline; ┐
+            block 요소를 inline으로 바꿔줌
+            
+        *display: block; ┐
+            inline 요소를 block으로 바꿔줌 
+        
+        */
+
+        a {
+            background-color: olive;
+            color: aliceblue;
+            display: block;
+        }
+
+        .inline-block {
+            padding: 0;
+            list-style: none;
+        }
+
+        .inline-block li {
+            display: inline-block;
+            background-color: mediumturquoise;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .inline {
+            list-style: none;
+            padding: 0;
+        }
+
+        .inline li {
+            display: inline;
+            background-color: mediumvioletred;
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .guri {
+            width: 300px;
+        }
+
+        .display {
+            list-style: none;
+            padding: 0;
+        }
+
+        .display li {
+            background-color: #01517c;
+            color: aliceblue;
+            padding: 0 10px;
+            display: inline-block;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .display .none {
+            /* display: none; */
+            visibility: hidden;
+        }
+
+        /* 
+        display: none;
+        원래 없는 요소처럼 화면에서 공간까지 사라짐 */
+
+        /* visibility: hidden
+        공간은 있지만 요소만 사라짐 */
+    </style>
+
+    <h2>box-shadow: x y blur color;</h2>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <style>
+        /* , = 그룹선택자 */
+        .box1,
+        .box2,
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+
+        .box1 {
+            box-shadow: 0 4px 4px #ccc;
+        }
+
+        .box2 {
+            box-shadow: -5px -5px 2px darkred;
+        }
+
+        .box3 {
+            box-shadow: 0 0 8px rgb(49, 16, 1);
+        }
+    </style>
+
+    <h2>border-radius</h2>
+    <p class="radius">Pet Sound는 미국의 록 밴드 비티보이스의 열 한번째 정규 음악이다. 1996년 5월 16일 , 캐피털 레코드에서 발매되었으며 발매 이후 대중 음악사에서 가장 영향력 있는 음반 가운데 하나이자 1960년 최고의 음반 가운데 하나로 꼽는다.</p>
+
+    <div class="circle"></div>
+    <div class="oval"></div>
+
+    <style>
+        .radius {
+            border: 5px solid coral;
+            width: 300px;
+            padding: 20px;
+
+            /* border-radius: 20px; */
+            /* border-radius: 20px 100px; */
+            /* border-radius: 20px 80px 0 40px; */
+            /* 순서 = 위/왼쪽 → 위/오른쪽 → 아래/오른쪽 → 아래/왼쪽 */
+
+            /* border-bottom-right-radius: 50px; */
+            border-radius: 0 50px 0 0;
+            /* └ 한쪽만 둥근걸 주고 싶을때 */
+        }
+
+        .circle {
+            width: 200px;
+            height: 200px;
+            background-color: #01517c;
+            border-radius: 50%;
+            margin-bottom: 30px
+        }
+
+        .oval {
+            width: 500px;
+            height: 200px;
+            background-color: cadetblue;
+            border-radius: 50%;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ***************************************************** */
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.container .title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.container .title h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+.container .title p {
+    font-size: 1.5rem;
+    color: #777;
+}
+
+.container .content {
+    width: 100%;
+}
+
+.container .content .box {
+    width: 20%;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+    float: left;
+    position: relative;
+
+    overflow: hidden;
+}
+
+.container .content .box h3 {
+    position: absolute;
+    
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+
+    padding: 30px;
+    width: 100%;
+}
+
+.container .content .box a img {
+    width: 100%;
+    box-shadow: 0 2px 6px gray;
+
+    transition: all 0.8s;
+  
+}
+
+.container .content .box a img:hover {
+    transform: scale(1.5);
+}
+
+.container .content .box.shabu a img {
+    border-radius: 0 150px 0 0;
+}
+
+.container .content .box.tteok a img {
+    border-radius: 0 0 0 150px;
+}
+
+.container .content .box.gogi a img {
+    border-radius: 0 0 150px 0;
+}
+
+.container .content .box.bibim a img {
+    border-radius: 0 0 0 150px;
+}
+
+.container .content .box.anchovy a img {
+    border-radius: 0 150px 0 0;
+}

@@ -1,0 +1,189 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* float 해제 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 
+구글웹폰트
+
+1) Noto Sans Kt (font-weight: 100~900)
+font-family: "Noto Sans KR", sans-serif;
+
+2) Fredoka (font-weight: 300~700)
+font-family: "Fredoka", sans-serif;
+*/
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 
+body에 넣지 말아야 할것
+- width, height, margin, padding
+*/
+
+.sandwich-menu {
+    width: 1200px;
+    margin: 60px auto;
+}
+
+.sandwich-menu .top {
+    position: relative;
+    margin-bottom: 40px;
+    /* outline: 2px solid red; */
+}
+
+.top .title {
+    background-image: url(../img/example3/bul_tit.png);
+    background-repeat: no-repeat;
+    
+    font-family: "Fredoka", sans-serif;
+    font-size: 2.7rem;
+    font-weight: 600;
+    line-height: 60px;
+
+    padding-left: 30px;
+
+    float: left;
+}
+
+.top .tapmenu {
+    float: right;    
+}
+.top .tapmenu li {
+    display: inline-block;
+    line-height: 60px;
+
+    position: relative; /* 가상요소 after의 기준 */
+}
+/* 
+float : 일정한 너비를 나눠 가질때 
+inline-block : 충분한 너비가 있고 위치 설정이 필요할때 
+*/
+
+.top .tapmenu li~li {
+    margin-left: 30px;
+}
+/* 형제요소 선택자 첫째 빼고 */
+
+.top .tapmenu li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 13px;
+    background-color: #777;
+
+    position: absolute;
+    left: -17px;
+    top: 24px;
+}
+
+.top .tapmenu li:first-child::after {
+    display: none;
+}
+/* └ 요소를 없애주는 것 */
+
+.top .tapmenu li a {
+    color: #777;
+}
+
+.top .tapmenu li.active a {
+    color: #009132;
+    font-weight: 600;
+}
+
+.sandwich-menu .content {
+    position: relative; /* .btn의 기준 */
+}
+
+.sandwich-menu .content .btn {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+}
+.sandwich-menu .content .btn.prev {
+    left: -80px;
+}
+
+.sandwich-menu .content .btn.next {
+    right: -80px;
+}
+
+.sandwich-menu .content .btn a {
+    /* 글자없애기 */
+    font-size: 0;
+    /* opacity: 0; - 배경이미지까지 없어짐, 값 : 0~1 */
+    /* text-indent: -9999px; - 블럭요소가 아닐땐 적용 안됨 */
+
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+    background-repeat: no-repeat;
+    display: block;
+    height: 100%;
+}
+.sandwich-menu .content .prev a:hover {
+    background-position: left bottom;
+}
+.sandwich-menu .content .next a {
+    background-position: right top;
+}
+.sandwich-menu .content .next a:hover {
+    background-position: right bottom;
+}
+
+.sandwich-menu .content .menu-wrap {
+    width: 100%;
+}
+
+.menu-wrap li {
+    width: 25%;
+    float: left;
+}
+.menu-wrap li a {
+    display: block;
+}
+.menu-wrap li a img {
+    width: 100%;
+}
+
+.menu-wrap li .info {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.menu-wrap li .info h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.menu-wrap li .info p {
+    letter-spacing: -0.6px;
+    word-break: keep-all;
+    /* 단어를 중간에 끊지 않음 */
+
+    line-height: 1.4;
+    color: #777;
+}

@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* float 해제 */
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 
+구글웹폰트
+
+1) Noto Sans Kt (font-weight: 100~900)
+font-family: "Noto Sans KR", sans-serif;
+
+2) Fredoka (font-weight: 300~700)
+font-family: "Fredoka", sans-serif;
+*/
+
+body {
+    font-family: "Fredoka", sans-serif;
+}
+
+/* 
+body에 넣지 말아야 할것
+- width, height, margin, padding
+*/
+
+.sandwich-menu {
+    width: 1200px;
+    margin: 60px auto;
+}
+
+.sandwich-menu .top {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.top .title {
+    background-image: url(../img/example3/bul_tit.png);
+    background-repeat: no-repeat;
+    
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 60px;
+    padding: 6px 0 0 24px;
+}
+
+.top .tapmenu {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: -6px; 
+}
+.top .tapmenu li {
+    float: left;
+    padding-left: 10px;
+}
+
+/* .top .tapmenu li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 14px;
+    background-color: #777;
+
+    position: absolute;
+    left: -17px;
+    top: 23px;
+
+} */
+
+.top .tapmenu li a {
+    text-align: center;
+    color: #777;
+    font-weight: 600;
+}
+.top .tapmenu li:first-child a {
+    color: green;
+}
+
+.top .tapmenu li a:hover {
+    color: green;
+}
+
+
+.sandwich-menu .content {
+    width: 100%;
+    position: relative;
+}
+
+.content .btn a {
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+
+    
+}
+.content .prev a {
+    left: -150px;
+}
+.content .next a {
+    background-position: -50px 0;
+    right: -150px;
+}
+
+.content .btn a:hover {
+    background-image: url(../img/example3/icon_event_slider_arr.png);
+}
+.content .prev a:hover {
+    background-position: 0 -50px;
+}
+.content .next a:hover {
+    background-position: -50px -50px;
+}
+
+.content .menu-wrap {
+    width: 100%;
+}
+.content .menu-wrap li {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+
+.content .menu-wrap li a img {
+    width: 100%;
+}
+
+.content .menu-wrap li .info {
+    padding: 0 20px;
+}
+
+.content .menu-wrap li .info h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.content .menu-wrap li .info p {
+    color: #777;
+    word-break: keep-all;
+}
