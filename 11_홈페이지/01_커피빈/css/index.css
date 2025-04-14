@@ -1,0 +1,393 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ul, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+input {
+    border: none;
+}
+/* **************************************** */
+
+/*  폰트
+
+1) merriweather 폰트 (영문)
+    font-family: "Merriweather", serif;
+    font-weight: 300 ~ 900;
+
+2) nanum gothic 폰트 (한글)
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 400 | 700 | 800;
+*/
+/* ********************************************** */
+
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ******************************************* */
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 150px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+header .top-line {
+    background-color: lightgray;
+}
+
+.top-line .info {
+    width: 1280px;
+    margin: 0 auto;
+    line-height: 1.6rem;
+}
+.top-line .info ul {
+    float: right;
+}
+.info ul li {
+    display: inline-block;
+    margin-left: 10px;
+}
+.info ul li a {
+    color: #555;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.info ul li a:hover {
+    color: rgb(47, 28, 17);
+    text-decoration: underline;
+}
+
+.info ul li.move a {
+    background-color: rgb(47, 28, 17);
+    display: inline-block;
+}
+
+.info ul li.move a:hover {
+    background-color: lightgray;
+}
+
+header .title {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 16px 0;
+    line-height: 2rem;
+    position: relative;
+}
+
+.title h1.logo {
+    float: left;
+}
+
+.title .gnb {
+    position: absolute;
+    left: 124px;
+    top: 40px;
+}
+
+.title .gnb ul li {
+    display: inline-block;
+    margin: 0 30px;
+}
+.title .gnb ul li a {
+    color: #222;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.title .gnb ul li a:hover {
+    color: rgb(243,130,0);
+}
+
+.title .search-box {
+    float: right;
+    margin-top: 20px;
+}
+
+.search-box input[type="search"] {
+    border-bottom: 1px solid #999;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 8px;
+}
+.search-box input[type="submit"] {
+    width: 20px;
+    height: 20px;
+    background: url(../img/ico_search.png) no-repeat;
+    cursor: pointer;
+}
+
+.search-box input, .search-box img {
+    vertical-align: middle;
+}
+
+/* **SECTION************************* */
+section {
+    margin-top: 150px;
+}
+section article {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+section article h2.con-title {
+    text-align: center;
+    color: rgb(243,130,0);
+    font-family: "Merriweather", serif;
+    margin: 50px 0;
+    font-size: 2rem;
+}
+
+section .main-event {
+    width: 100%;
+}
+
+.main-event a img {
+    width: 100%;
+    display: block;
+}
+
+section .md-pick {
+    margin-bottom: 90px;
+}
+
+.con-pick .box-pick {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.con-pick .box-pick .view {
+    position: relative;
+    overflow: hidden;
+}
+
+.con-pick .box-pick .view a img {
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.con-pick .box-pick .view p a {
+    display: inline-block;
+    background-color: rgb(207,102,26);
+    color: #fff;
+    padding: 10px 20px;
+    margin-left: 80px;
+    position: absolute;
+    left: 10px;
+    bottom: -40px;
+}
+.con-pick .box-pick .view:hover a img {
+    opacity: 0.7;
+}
+.con-pick .box-pick .view:hover p a {
+    bottom: 100px;
+}
+
+.con-pick .box-pick .pick-des {
+    text-align: center;
+}
+
+.pick-des h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.pick-des p:first-child {
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.pick-des p:last-child {
+    color: rgb(207,102,26);
+}
+
+section .new {
+    margin-bottom: 90px;
+}
+
+.con-new .box-new {
+    float: left;
+    width: 32%;
+}
+
+.con-new .box-new~.box-new {
+    margin-left: 2%;
+}
+.con-new .box-new a {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.con-new .box-new a img {
+    width: 100%;
+    transition: all 0.7s;
+}
+.con-new .box-new a img:hover {
+    transform: scale(1.5);
+}
+
+.con-new .box-new h3 {
+    font-size: 18px;
+    color: rgb(207,102,26);
+    text-align: center;
+    font-weight: 700;
+}
+
+section .sns {
+    width: 100%;
+    padding: 20px 0;
+    background-color: rgb(124,81,161);
+    text-align: center;
+}
+
+.sns .sns-des {
+    margin: 40px 0;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+.sns .sns-des span {
+    padding: 10px;
+}
+
+.sns .sns-img {
+    width: 1280px;
+    margin: 0 auto 40px;
+}
+
+.sns .sns-img ul li {
+    float: left;
+    width: 16.66%;
+    overflow: hidden;
+}
+
+.sns .sns-img ul li a img {
+    width: 100%;
+    display: block;
+    transition: all 0.7s;
+}
+
+.sns .sns-img ul li:hover a img {
+    transform: scale(1.3);
+    opacity: 0.7;
+}
+
+.sns .sns-link a {
+    display: inline-block;
+    background-color: rgb(243,130,0);
+    margin-bottom: 40px;
+    color: #fff;
+    padding: 10px 14px;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+}
+.sns .sns-link a:hover {
+    background-color: #fff;
+    color: rgb(243,130,0);
+}
+
+/* *FOOTER******************************************************** */
+
+footer {
+    background-color: lightgray;
+    padding: 40px 0 50px;
+}
+
+footer .foot-inner {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+footer .foot-link {
+    border-bottom: 1px solid #222;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.foot-link ul .link-box {
+    float: left;
+    width: 16.66%;
+}
+
+.link-box p {
+    color: rgb(207,102,26);
+    margin-bottom: 12px;
+}
+
+.link-box ul li {
+    margin-bottom: 8px;
+}
+.link-box ul li a {
+    color: #555;
+}
+
+.link-box ul li a:hover {
+    text-decoration: underline;
+    color: rgb(47, 28, 17);
+    font-weight: 700;
+}
+
+footer .foot-info {
+    position: relative;
+}
+
+.foot-info .info-link ul li  {
+    display: inline-block;
+    margin: 0 20px 10px 0;
+    position: relative;
+}
+
+.foot-info .info-link ul li~li::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #555;
+    position: absolute;
+    left: -11px;
+    top: 3px;
+}
+.foot-info .info-link ul li a {
+    color: #555;
+}
+.foot-info .info-link ul li a:hover {
+    color: rgb(47, 28, 17);
+    font-weight: 700;
+}
+.foot-info .info-link p {
+    color: #555;
+}
+
+.foot-info .foot-sns {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.foot-info .foot-sns a {
+    padding: 0 8px;
+    display: inline-block;
+}
