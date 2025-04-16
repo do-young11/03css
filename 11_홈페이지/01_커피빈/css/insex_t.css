@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5,h6 {
     font-family: "Merriweather", serif;
     font-weight: 700;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 body {
@@ -198,3 +199,185 @@ main .event img {
 
 /* section ************************************************************** */
 
+article.md-pick {
+    width: 1280px;
+    margin: 0 auto 100px;
+}
+
+.md-pick .md-wrap {
+    text-align: center;
+}
+
+.md-pick .md-wrap .md-box {
+    float: left;
+    width: 25%;
+}
+
+.md-box .photo {
+    margin-bottom: 30px;
+    position: relative;
+}
+.md-box .photo img {
+    width: 100%;
+    display: block;
+}
+.md-box .photo a.quick {
+    background-color: rgb(243, 130, 0);
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1.2px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20%;
+    display: none;
+    /* 위치잡기 
+    top: 50%;
+    transform: translate(-50%, -50%); */
+}
+.md-box .photo:hover img {
+    opacity: 0.4;
+}
+.md-box .photo:hover a.quick {
+    display: inline-block;
+}
+
+.md-box .caption {
+    padding: 0 5%;
+}
+.md-box .caption h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.md-box .caption p {
+    margin-bottom: 10px;
+}
+
+.md-box .caption p.price {
+    color: rgb(207, 102, 26);
+    font-weight: 700;
+}
+
+
+article.new {
+    width: 1280px;
+    margin: 0 auto 100px;
+}
+
+article.new .new-box {
+    float: left;
+    width: 32%;
+}
+article.new .new-box ~ .new-box {
+    margin-left: 2%;
+}
+
+article.new .new-box > a  {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+article.new .new-box > a img {
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+
+article.new .new-box > a:hover img {
+    transform: scale(1.5);
+}
+
+article.new .new-box h3 {
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700;
+}
+article.new .new-box h3 a {
+    color: rgb(207, 102, 26);
+}
+
+article.instagram {
+    width: 100%;
+    background-color: rgb(124,81,161);
+    padding: 60px 0;
+    /* text-align: center; */
+}
+article.instagram .sec-title {
+    color: rgb(255, 255, 255);
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+article.instagram .thumb-list {
+    margin-bottom: 50px;
+}
+article.instagram .thumb-list li {
+    width: 16.66%;
+    overflow: hidden;
+}
+
+article.instagram .thumb-list li a img {
+    width: 100%;
+    display: block;
+    transition: all 0.5s;
+}
+article.instagram .thumb-list li:hover img {
+    transform: scale(1.2);
+    opacity: 0.7;
+}
+
+article.instagram .follow-btn {
+    background-color: rgb(243, 130, 0);
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Merriweather", serif;
+    display: inline-block;
+    padding: 10px 20px;
+
+    /* 버튼위치 조절 */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+article.instagram .follow-btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(243, 130, 0);
+}
+
+/* footer************************************************************ */
+footer {
+    width: 100%;
+    background-color: lightgray;
+    padding: 60px 0;
+}
+
+footer a {
+    color: #333;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .sitemap {
+    margin-bottom: 30px;
+}
+.sitemap .mapbox {
+    float: left;
+    width: 16.66%;
+}
+.sitemap .mapbox h3 {
+    font-size: 18px;
+    color: rgb(207, 102, 26);
+    font-family: "Merriweather", serif;
+    margin-bottom: 20px;
+}
+
+.sitemap .mapbox ul li {
+    float: none;
+    line-height: 30px;
+}
+
+footer .info {}
