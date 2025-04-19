@@ -15,20 +15,24 @@ body {
     font-family: "Nanum Gothic", sans-serif;
     color: #333;
 }
+
 /* **Bread crumb***************************************** */
 .breadcrumb {
     margin-top: 140px;
-    background-color: rgb(124,81,161);
+    background-color: rgb(124, 81, 161);
 }
+
 .breadcrumb ul {
     width: 1280px;
     margin: 0 auto;
 }
+
 .breadcrumb ul li {
     margin-left: 10px;
     padding: 10px;
     position: relative;
 }
+
 .breadcrumb ul li::after {
     content: ">";
     display: block;
@@ -37,9 +41,11 @@ body {
     left: 100%;
     top: 10px;
 }
+
 .breadcrumb ul li:last-child::after {
     display: none;
 }
+
 .breadcrumb ul li a {
     color: rgb(255, 255, 255);
     font-size: 14px;
@@ -55,10 +61,12 @@ section article {
     margin: 0 auto;
     text-align: center;
 }
+
 section article.banner {
     width: 100%;
     margin-bottom: 60px;
 }
+
 article.banner img {
     width: 100%;
     max-width: 1920px;
@@ -67,7 +75,7 @@ article.banner img {
 }
 
 section.simply article.value .value-list {
-    border-bottom: 1px solid rgb(124,81,161);
+    border-bottom: 1px solid rgb(124, 81, 161);
     padding-bottom: 40px;
     margin-bottom: 40px;
 }
@@ -76,6 +84,7 @@ section.simply article.value .value-list {
     width: 25%;
     position: relative;
 }
+
 .value .value-list li~li::after {
     content: "";
     display: block;
@@ -93,12 +102,13 @@ section.simply article.value .value-list {
 
 .value-list li .txt-box h3 {
     font-family: "Merriweather", serif;
-    color: rgb(124,81,161);
+    color: rgb(124, 81, 161);
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 14px;
     text-transform: uppercase;
 }
+
 .value-list li .txt-box p {
     font-size: 18px;
     line-height: 1.3rem;
@@ -106,19 +116,21 @@ section.simply article.value .value-list {
 
 .value-list li dl dt {
     font-family: "Merriweather", serif;
-    color: rgb(124,81,161);
+    color: rgb(124, 81, 161);
     font-weight: 700;
     font-size: 20px;
     margin-bottom: 14px;
     text-transform: uppercase;
 }
+
 .value-list li dl dd {
     font-size: 18px;
     line-height: 1.3rem;
 }
+
 .value-list li dl dd.color {
     font-family: "Merriweather", serif;
-    color: rgb(124,81,161);
+    color: rgb(124, 81, 161);
     font-weight: 700;
     font-size: 18px;
     margin-top: 10px;
@@ -129,6 +141,7 @@ section.simply article.value .value-list {
     line-height: 1.5rem;
     font-size: 18px;
 }
+
 .value .value-des p:last-child {
     font-size: 24px;
     font-weight: 700;
@@ -142,32 +155,12 @@ section.specialty article.product article h2 {
     color: rgb(207, 102, 26);
     margin-bottom: 10px;
     letter-spacing: 1px;
-    padding: 0 30px;
-    display: inline-block;
-    position: relative;
+    background: url(../img/bg_bar6.gif) repeat-x center;
 }
-.product article h2::after {
-    content: "";
-    background-image: url(../img/bg_bar6.gif);
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    left: 100%;
-    top: 50%;
 
-}
-.product article h2::before {
-    content: "";
-    display: block;
-    background-image: url(../img/bg_bar6.gif);
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    right: 100%;
-    top: 50%;
-}
-.product article.tea h2::after, .product article.tea h2::before {
-    width: 175%;
+.product article h2 span {
+    background-color: #fff;
+    padding: 0 30px;
 }
 
 .product article h3 {
@@ -175,28 +168,35 @@ section.specialty article.product article h2 {
     color: rgb(207, 102, 26);
     margin-bottom: 20px;
 }
+
 .product article p {
     line-height: 1.4rem;
     margin-bottom: 30px;
 }
+
 .product article ul {
     margin-bottom: 50px;
 }
+
 .product article ul li {
     width: 32%;
     overflow: hidden;
 }
+
 .product article ul li~li {
     margin-left: 2%;
 }
+
 .product article ul li img {
     width: 100%;
     display: block;
     transition: all 0.7s;
 }
+
 .product article ul li:hover img {
     transform: scale(1.5);
 }
+
 .product article.tea ul li:hover img {
     transform: scale(1.2);
     opacity: 0.6;
@@ -210,9 +210,10 @@ section.specialty article.product article h2 {
     text-transform: uppercase;
 }
 .product article div.btn a:hover {
-    border: 2px solid rgb(243, 130, 0);
     background-color: rgb(255, 255, 255);
     color: rgb(243, 130, 0);
+    font-weight: 600;
+    border: 2px solid rgb(243, 130, 0);
 }
 
 .product article.coffee {
