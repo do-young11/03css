@@ -36,13 +36,11 @@ body {
   } */
 
 /* ******************************************** */
-
-
 header .title {
-    width: 1280px;
+    width: calc(100% - 200px);
     padding-top: 30px;
 
-    margin: 0 auto 10px;
+    margin: 0 auto;
 
     position: relative;
 }
@@ -82,10 +80,12 @@ header .title {
     color: brown;
     font-weight: 700;
 }
+section div {
+    width: calc(100% - 200px);
+    margin: 0 auto;
+}
 
 section .box {
-    width: 1280px;
-    margin: 0 auto;
     text-align: center;
 }
 
@@ -145,12 +145,12 @@ footer {
     height: 80px;
     background-color: #eee;
     padding: 20px;
-
+    
     position: relative;
 }
 
 footer .foot-box {
-    width: 1280px;
+    width: calc(100% - 200px);
     line-height: 80px;
     margin: 0 auto;
 }
