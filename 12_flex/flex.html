@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+        /* 
+        속성	                설명	                            예시
+        display: flex	        Flex 컨테이너 선언	                display: flex;
+        flex-direction	        주축 방향 (row / column)	        flex-direction: row;
+        flex-wrap	            아이템 줄바꿈 여부	                flex-wrap: wrap;
+        flex-flow	            direction + wrap 단축	            flex-flow: row wrap;
+        justify-content	        주축 정렬	                        flex-start, center, space-between
+        align-items	            교차축 정렬	                        flex-start, center, stretch
+        align-content	        여러 줄 정렬	                    space-between, space-around
+        gap	                    아이템 간격	                        gap: 10px;
+
+
+        🔹 자식 아이템 속성
+        
+        속성	                설명	                            예시
+        flex-grow	            남은 공간 차지 비율	                flex-grow: 2; (2배 차지)
+        flex-shrink	            줄어들 때 비율	                    flex-shrink: 0; (줄어들지 않음)
+        flex-basis	            기본 크기 (px, %, auto)	            flex-basis: 200px;
+        flex	                grow + shrink + basis 단축	        flex: 1; or flex: 2 1 0;
+        align-self	            개별 아이템 정렬	                align-self: flex-end;
+        order	                아이템 순서 변경	                order: 2;
+        */
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            /* 가로 정렬 */
+            justify-content: space-between;
+            /* 양 끝 정렬 */
+            align-items: center;
+            /* 세로 가운데 정렬 */
+            gap: 20px;
+            /* 아이템 사이 20px */
+        }
+
+        .item {
+            flex: 1;
+            /* 같은 비율로 차지 */
+            background: #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 
+            justify-content (주 축(main axis) 방향으로 flex 아이템을 정렬하는 속성) 의 값
+
+            - flex-start	아이템들을 시작점에 붙임 (기본값)	왼쪽 정렬 (row일 때)
+            - flex-end	아이템들을 끝점에 붙임	오른쪽 정렬
+            - center	아이템들을 가운데 정렬	가운데 정렬
+            - space-between	양 끝에 붙이고, 나머지는 동일 간격	<A>---<B>---<C>
+            - space-around	모든 아이템 주위에 동일 간격 (양 끝은 절반 간격)	-<A>- -<B>- -<C>-
+            - space-evenly	모든 아이템 사이와 양 끝까지 동일 간격	--<A>--<B>--<C>--
+        */
+
+        /* 
+        align-items 정의 (flex-direction: row → 교차 축 = 세로 / flex-direction: column → 교차 축 = 가로 -> 즉, Flexbox 안에서 주 축 반대 방향 정렬)
+
+        값	                설명	                                        예시(row 기준)
+        flex-start	        교차축 시작점에 맞춤	                        위쪽 정렬
+        flex-end	        교차축 끝점에 맞춤	                            아래쪽 정렬
+        center	            교차축 가운데 정렬	                            세로 가운데
+        stretch	            아이템 높이를 컨테이너에 맞춰 늘림 (기본값)	    높이 자동 맞춤
+        baseline	        텍스트 기준선 기준 정렬	                        텍스트 줄 맞춤
+        */
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item">Box1</div>
+        <div class="item">Box2</div>
+        <div class="item">Box3</div>
+    </div>
+
+</body>
+
+</html>
